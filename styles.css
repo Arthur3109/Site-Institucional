@@ -1,0 +1,2042 @@
+/* Definição da Paleta de Cores */
+:root {
+    --azul-marinho: #2F4858;
+    --azul-claro: #BFD7ED;
+    --branco: #FFFFFF;
+    --cinza-claro: #E5E5E5;
+    --cinza-grafite: #5C5C5C;
+    /* Cores de Destaque */
+    --destaque-verde: #00FF99; 
+    --destaque-magenta: #FF007F; 
+    --azul-marinho: #001C3A;   /* Texto principal, Backgrounds escuros */
+    --destaque-verde: #00CC99; /* Destaque, CTA, Hover */
+   /* Bordas e linhas de separação */
+   
+}
+
+
+/* Reset Básico e Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    color: var(--cinza-grafite);
+    background-color: var(--branco);
+    line-height: 1.6;
+    overflow-x: hidden; 
+}
+
+section {
+    padding: 60px 5%; 
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: var(--azul-marinho);
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+header {
+    background-color: var(--cinza-claro) !important;
+    color: var(--azul-marinho);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between; /* Alinha logo à esquerda e nav/bandeiras à direita */
+    align-items: center;
+    position: relative;
+    z-index: 1000 !important;
+}
+
+header .logo h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--azul-marinho);
+    /* Se a logo PITÁGORAS for um texto */
+}
+
+header > .main-nav, header > .language-switcher {
+    /* Remove o posicionamento absoluto das bandeiras */
+    position: static; 
+    transform: none; 
+}
+
+
+/* Estilo do Botão Hambúrguer (Oculto no Desktop) */
+.menu-toggle {
+    display: none; /* Oculto no desktop */
+    background: red; /* Fundo VERMELHO para contraste máximo */
+    border: 3px solid black; /* Borda PRETA para destaque */
+    padding: 8px 10px;
+    border-radius: 5px; 
+    font-size: 1.6em; /* Aumentei o tamanho */
+    color: yellow; /* Ícone AMARELO para teste */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.menu-toggle:hover {
+    background-color: #00A380; /* Tom mais escuro no hover */
+}
+
+/* Estilo da Navegação (Horizontal no Desktop) */
+nav.main-nav ul {
+    list-style: none;
+    display: flex; 
+    justify-content: flex-end; 
+    margin: 0;
+    padding: 0;
+}
+
+nav.main-nav ul li {
+    margin-left: 25px;
+}
+
+nav.main-nav ul li a {
+    text-decoration: none;
+    color: var(--azul-marinho);
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+nav.main-nav ul li a:hover {
+    color: var(--destaque-verde);
+}
+
+/* ==========================================
+   CONFIGURAÇÃO DE VARIÁVEIS CSS (CHAVE PARA CORES E FONTES!)
+   ========================================== */
+:root {
+    /* Cores do Tema */
+    --azul-marinho: #001f3f; 
+    --amarelo-destaque: #FFC300; 
+    --amarelo-hover: #E0B000;
+    --cor-texto-principal: #333; /* Exemplo */
+    --cor-fundo-claro: #f4f4f4; /* Exemplo */
+
+    /* Variáveis de Fonte (Para Acessibilidade) */
+    --base-font-size: 16px; /* Tamanho base padrão */
+    --font-scale-factor: 1.0; /* Fator inicial de escala */
+}
+
+/* Aplica o fator de escala a todo o corpo para que o texto reaja */
+body {
+    /* Garante que o CSS das fontes reaja ao JS */
+    font-size: calc(var(--base-font-size) * var(--font-scale-factor));
+    transition: font-size 0.2s ease; 
+    
+    /* Adiciona margem ou padding para evitar que os painéis cubram o conteúdo */
+    padding-right: 50px; /* Um valor de exemplo para dar espaço aos painéis fixos */
+    /* ... outros estilos de body ... */
+}
+
+/* ==========================================
+   ACESSIBILIDADE: Estilização dos Painéis (Separados)
+   ========================================== */
+
+/* Estilos de base para os painéis flutuantes */
+.accessibility-controls {
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px 10px;
+    /* AGORA AS CORES FUNCIONAM! */
+    background-color: var(--azul-marinho); 
+    border-radius: 8px 0 0 8px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* MUITO IMPORTANTE: Garante que fiquem acima de tudo. */
+}
+
+/* Posicionamento do Painel de Fonte (A+, A, A-) */
+#font-size-controls {
+    top: 40%; 
+    transform: translateY(-50%);
+}
+
+/* Estilização Comum para os Botões */
+.accessibility-controls button {
+    background-color: var(--amarelo-destaque); 
+    color: var(--azul-marinho);
+    border: none;
+    padding: 8px 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.1s;
+    width: 50px;
+    text-align: center;
+    line-height: 1;
+}
+
+.accessibility-controls button:hover {
+    background-color: var(--amarelo-hover); 
+    transform: scale(1.05);
+}
+
+
+/* =======================================================
+   3. MEDIA QUERY (RESPONSIVIDADE MOBILE)
+   ======================================================= */
+/* =======================================================
+   MEDIA QUERY (RESPONSIVIDADE MOBILE) - SOLUÇÃO FINAL
+   ======================================================= */
+@media (max-width: 768px) {
+    
+    header {
+        /* Garante que o logo e o botão fiquem lado a lado */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* Permite que o NAV caia para a próxima linha */
+    }
+    
+    /* 1. MOSTRA O BOTÃO HAMBÚRGUER */
+    .menu-toggle {
+        display: block; /* FORÇA a exibição no mobile */
+    }
+
+    /* 2. CONFIGURAÇÃO DO MENU MOBILE */
+    .main-nav {
+        /* Ocupa a largura total abaixo do logo/botão */
+        width: 100%; 
+        position: absolute; /* Para que ele fique abaixo do header */
+        top: 62px;
+        left: 0;
+        height: 0; /* Menu Fechado */
+        background-color: var(--azul-marinho);
+        overflow: hidden; 
+        transition: height 0.4s ease-in-out;
+        z-index: 999;
+    }
+
+    /* 3. CLASSE JS PARA ABRIR O MENU */
+    .main-nav.open {
+        height: 250px; 
+    }
+    
+    /* 4. LINKS VERTICAIS NO MENU ABERTO */
+    nav.main-nav ul {
+        flex-direction: column; 
+        padding: 15px 0;
+        text-align: center;
+    }
+    
+    nav.main-nav ul li a {
+        color: var(--branco); 
+    }
+}
+
+
+
+/* --- Seção Hero (Hero Cape) --- */
+
+.hero-section {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    padding: 80px 5%; 
+    min-height: 80vh; 
+    text-align: left;
+    background-color: var(--azul-claro); 
+}
+
+.hero-content, .hero-image {
+    width: 48%; 
+}
+
+.hero-subtitle {
+    font-size: 0.9em;
+    font-weight: 700;
+    color: var(--cinza-grafite);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--destaque-verde); 
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.hero-title {
+    font-size: 3.5em; 
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--azul-marinho);
+}
+
+.hero-title .highlight-text {
+    color: var(--destaque-verde); 
+}
+
+.hero-description {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: var(--cinza-grafite);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--destaque-verde);
+    color: var(--azul-marinho); 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 50px; 
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #00cc7a;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+}
+
+/* --- Responsividade Hero --- */
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column; 
+        text-align: center;
+        min-height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .hero-content, .hero-image {
+        width: 100%; 
+    }
+
+    .hero-image {
+        margin-top: 40px; 
+    }
+
+    .hero-title {
+        font-size: 2.5em; 
+    }
+}
+
+/* --- Seção Nossos Times --- */
+
+.times {
+    background-color: var(--branco); 
+}
+
+.section-subtitle {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    font-size: 1.1em;
+    color: var(--cinza-grafite);
+}
+
+.times-container {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 25px; 
+}
+
+.time {
+    background-color: var(--branco); 
+    border-radius: 18px; 
+    padding: 25px;
+    width: 23%; 
+    min-width: 250px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); 
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.time:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.time-logo {
+    height: 150px;
+    width: 100%;
+    margin: 0 auto 30px auto;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--branco); 
+}
+
+.time-title {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: var(--azul-marinho); 
+    margin-bottom: 10px;
+    min-height: 60px; 
+}
+
+.time-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--destaque-verde); 
+    transition: color 0.3s;
+}
+
+/* Aplicação das Cores de Fundo */
+.time-grego .time-logo {
+    background-color: var(--destaque-verde); 
+}
+
+.time-romano .time-logo {
+    background-color: var(--destaque-magenta); 
+}
+
+.time-alemao .time-logo {
+    background-color: #FFD700; 
+}
+
+.time-brasileiro .time-logo {
+    background-color: var(--azul-marinho); 
+}
+
+/* --- Responsividade Times --- */
+@media (max-width: 1200px) {
+    .time {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .time {
+        width: 90%; 
+    }
+}
+
+/* --- Seção Presença Nacional / Métricas --- */
+
+.presenca-nacional {
+    background-color: var(--azul-claro); 
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.presenca-nacional h2 span {
+    color: var(--azul-marinho); 
+}
+
+/* Logos de Parceiros */
+.destaque-parceiros {
+    background-color: var(--azul-marinho); 
+    padding: 20px 40px;
+    margin: 0 auto 50px auto;
+    border-radius: 10px;
+    max-width: 90%;
+    color: var(--branco);
+    font-weight: 500;
+}
+
+.parceiros-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.logo-item {
+    max-height: 100px; 
+    width: auto;
+    transition: all 0.5s ease-in-out; 
+    filter: grayscale(100%) opacity(60%); 
+}
+
+.logo-item:hover {
+    filter: grayscale(0%) opacity(100%); 
+    transform: translateY(-5px) scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* Métricas/Números */
+.metricas-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.metrica-card {
+    background-color: var(--branco);
+    padding: 30px 20px;
+    width: 20%; 
+    min-width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.metrica-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.metrica-numero {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--destaque-verde); 
+    margin-bottom: 5px;
+}
+
+.metrica-numero span {
+    font-size: 0.5em; 
+    vertical-align: top;
+    font-weight: 500;
+}
+
+.metrica-texto {
+    font-size: 1em;
+    color: var(--cinza-grafite);
+}
+
+/* --- Responsividade Métricas --- */
+@media (max-width: 1024px) {
+    .metrica-card {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 600px) {
+    .metrica-card {
+        width: 90%; 
+    }
+}
+
+/* --- Seção Nossa Ética (Pilares) --- */
+
+#etica {
+    background-color: var(--azul-marinho); 
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#etica h2 {
+    color: var(--branco); 
+    margin-bottom: 60px;
+}
+
+#etica h2 span {
+    color: var(--azul-claro); 
+}
+
+.pilares-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pilar-card {
+    background-color: rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    color: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    width: 30%; 
+    min-width: 300px;
+    text-align: left;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.pilar-card:hover {
+    background-color: rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+
+.pilar-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--cinza-grafite); 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em; 
+    margin-bottom: 20px;
+    color: var(--branco); 
+}
+
+.pilar-card h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--azul-claro); 
+}
+
+.pilar-card p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: var(--azul-claro); 
+}
+
+.pilar-link {
+    text-decoration: none;
+    color: var(--destaque-verde); 
+    font-weight: bold;
+    display: block; 
+    text-align: right;
+    margin-top: 20px;
+    transition: color 0.3s;
+}
+
+.pilar-link:hover {
+    color: var(--azul-claro);
+}
+
+
+/* --- Responsividade Pilares --- */
+@media (max-width: 992px) {
+    .pilar-card {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 600px) {
+    .pilar-card {
+        width: 90%; 
+    }
+}
+
+/* --- Seção Depoimentos de Clientes (NOVO: Efeito FADE) --- */
+
+#depoimentos {
+    background-color: var(--branco); 
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+#depoimentos h2 {
+    font-size: 2.5em;
+    color: var(--azul-marinho); 
+    margin-bottom: 60px;
+}
+
+#depoimentos h2 span {
+    color: var(--amarelo-destaque); 
+}
+
+/* Container do Carrossel - Fixo */
+.carousel-container {
+    position: relative;
+    max-width: 900px; 
+    margin: 0 auto;
+    /* IMPORTANTE para o Fade: Garante que os slides se sobreponham, mas fiquem na área visível. */
+    height: 300px; /* Altura fixa para evitar pulos quando o texto muda */
+}
+
+/* Pista de Slides FADE (Não é mais um flex box, mas um container para slides sobrepostos) */
+.carousel-fade-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo do Depoimento Individual FADE */
+.depoimento-slide-fade {
+    /* Posicionamento ABSOLUTO para que os slides fiquem um em cima do outro */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    
+    opacity: 0; /* Começa invisível */
+    transition: opacity 1.0s ease-in-out; /* Efeito de transição de 1 segundo */
+    
+    padding: 20px;
+    text-align: center;
+}
+
+/* O slide ativo é visível e tem prioridade */
+.depoimento-slide-fade.active {
+    opacity: 1;
+    z-index: 1; 
+}
+
+.depoimento-texto {
+    font-size: 1.3em;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: var(--cinza-grafite);
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.depoimento-autor {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--azul-marinho); 
+    margin-top: 10px;
+}
+
+/* --- Setas de Navegação (MANTIDAS) --- */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--azul-marinho); 
+    border: 2px solid var(--azul-marinho);
+    color: var(--branco); 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    font-size: 1.2em; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0; 
+    z-index: 5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-arrow:hover {
+    background-color: var(--destaque-verde); 
+    border-color: var(--destaque-verde);
+    color: var(--azul-marinho); 
+}
+
+.left-arrow {
+    left: -60px; 
+}
+
+.right-arrow {
+    right: -60px; 
+}
+
+/* Indicadores de Slides (Pontos) */
+.carousel-indicators-fade {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: var(--cinza-claro);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: var(--azul-marinho); 
+    transform: scale(1.2); 
+}
+
+
+/* --- Seção FAQ (Estilização Final) --- */
+.faq h2 span {
+    color: var(--destaque-verde);
+}
+
+.faq-item {
+    max-width: 800px;
+    margin: 15px auto;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+.faq-question {
+    width: 100%;
+    background-color: var(--azul-claro);
+    color: var(--azul-marinho);
+    text-align: left;
+    padding: 18px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding: 15px 25px;
+    text-align: left;
+    background-color: var(--branco);
+    border-top: 1px solid var(--cinza-claro);
+}
+
+.faq-question .seta {
+    font-size: 0.8em;
+    transition: transform 0.3s; /* Adiciona transição para a rotação da seta */
+    margin-left: 10px; /* Espaçamento da seta */
+}
+
+/* Estilização para os botões gerais */
+button {
+    background-color: var(--destaque-verde);
+    color: var(--azul-marinho);
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00cc7a; 
+}
+
+
+/* --- Rodapé (Footer) --- */
+/* =======================================================
+   RODAPÉ (FOOTER) - PROFISSIONAL E ACESSÍVEL
+   ======================================================= */
+footer {
+    background-color: var(--azul-marinho); /* Fundo escuro (Alto Contraste) */
+    color: var(--branco); /* Texto claro */
+    padding: 60px 5%;
+    line-height: 1.8;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Para quebras em telas menores */
+}
+
+.footer-col {
+    flex: 1; /* Distribuição uniforme das colunas */
+    min-width: 250px; /* Garante que não fiquem muito estreitas */
+}
+
+footer h3, footer h4 {
+    color: var(--destaque-verde); /* Títulos em cor de destaque */
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+/* Links Rápidos */
+.links-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links-col a {
+    color: var(--cinza-claro);
+    text-decoration: none;
+    transition: color 0.3s;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.links-col a:hover {
+    color: var(--destaque-verde);
+}
+
+/* Informações de Contato */
+.contact-col p {
+    margin-bottom: 10px;
+}
+
+.contact-col a {
+    color: var(--cinza-claro);
+    text-decoration: none;
+}
+
+.contact-col a:hover {
+    color: var(--destaque-verde);
+}
+
+/* Links de Redes Sociais */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: var(--branco);
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--destaque-verde);
+}
+
+/* Texto de Direitos Autorais */
+.copyright {
+    margin-top: 30px;
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+
+/* --- Responsividade do Rodapé --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-col {
+        min-width: 90%;
+        margin-bottom: 30px;
+    }
+    
+    .social-links a {
+        margin: 0 10px;
+    }
+}
+
+
+/*Site Sobre Nós*/
+
+/* =======================================================
+   ESTILIZAÇÃO DA SEÇÃO #HISTORIA
+   ======================================================= */
+
+#historia {
+    padding: 80px 5%;
+    background-color: var(--branco);
+}
+
+#historia h2 {
+    text-align: left; /* Alinhamento à esquerda */
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    padding-left: 20px;
+}
+
+#historia h2 span {
+    color: var(--destaque-verde);
+}
+
+.historia-container {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start; /* Alinha texto e imagens pelo topo */
+    flex-wrap: wrap; /* CRÍTICO: Permite quebras de linha em telas menores */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Coluna de Texto (Esquerda) */
+.historia-texto {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.historia-texto h3 {
+    color: var(--azul-marinho);
+    font-size: 1.6em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.historia-texto p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Coluna de Imagens (Direita) - Layout Simples e Limpo */
+.historia-imagens {
+    flex: 1;
+    display: flex; /* Novo Flexbox para alinhar as imagens */
+    flex-direction: column; /* Imagens empilhadas */
+    gap: 15px;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.imagem-destaque, .imagem-secundaria {
+    /* Tratamento de Imagem para Preenchimento */
+    height: 300px; 
+    background-color: var(--cinza-claro); 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /* Certifica que a imagem de fundo preencha o espaço sem deformar */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Atribua imagens de teste diferentes para melhor visualização */
+.imagem-destaque {
+    /* Exemplo de imagem para preencher */
+    background-image: url(Imagem/ChatGPT\ Image\ 25\ de\ out.\ de\ 2025\,\ 20_59_03.png);
+}
+
+.imagem-secundaria {
+    /* Exemplo de imagem para preencher */
+    background-image: url(Imagem/Sala\ de\ Conferência\ Filosófica\ Moderna.png);
+}
+
+
+/* Responsividade: Volta para uma coluna no mobile */
+@media (max-width: 900px) {
+    .historia-container {
+        flex-direction: column;
+    }
+    
+    #historia h2 {
+        text-align: center;
+    }
+
+    .historia-texto {
+        max-width: 100%;
+        order: 2; /* Coloca o texto abaixo das imagens no mobile */
+    }
+
+    .historia-imagens {
+        order: 1;
+        width: 100%;
+        max-width: 100%; /* Ocupa a largura total */
+        margin-bottom: 30px;
+    }
+}
+
+/* =======================================================
+   ESTILIZAÇÃO DA SEÇÃO #MVV-CARDS (MISSÃO, VISÃO, VALORES)
+   ======================================================= */
+#mvv-cards {
+    padding: 80px 5%;
+    background-color: var(--branco); 
+    text-align: center;
+}
+
+#mvv-cards h2 {
+    margin-bottom: 50px;
+}
+
+/* Layout de Grid/Colunas Flexível */
+.mvv-grid-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    /* Duas colunas para Valores e Missão/Visão para telas grandes */
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+}
+
+.mvv-card {
+    background-color: var(--azul-claro); /* Fundo suave para o card */
+    border: 1px solid var(--cinza-claro);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    height: auto; /* Altura automática */
+    box-shadow: 0 5px 15px rgba(0, 28, 58, 0.05);
+}
+
+/* Estilo para Missão e Visão (Cards menores) */
+.mission-card, .vision-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Posicionamento do card Visão para telas grandes */
+.vision-card {
+    grid-column: 1 / 2;
+}
+
+/* Estilo para o card Valores (Maior) */
+.values-card {
+    grid-row: 1 / span 2; /* Ocupa duas linhas verticais */
+    grid-column: 2 / 3;
+}
+
+/* Estilo dos Ícones */
+.mvv-icon {
+    font-size: 2em;
+    color: var(--azul-marinho); /* Ícone em azul marinho */
+    margin-right: 15px;
+}
+
+.mvv-card h3 {
+    display: inline;
+    font-size: 1.4em;
+    color: var(--azul-marinho);
+}
+
+.mvv-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--azul-marinho);
+}
+
+/* Lista de Valores */
+.values-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    color: var(--azul-marinho);
+}
+
+.values-card ul li {
+    margin-bottom: 12px;
+    padding-left: 0;
+    line-height: 1.5;
+    font-size: 0.95em;
+    /* Ícone de check em verde para a lista de valores */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%2300CC99" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>') no-repeat left center;
+    background-size: 16px;
+    padding-left: 25px;
+}
+
+/* Responsividade: Volta para uma coluna no Mobile */
+@media (max-width: 850px) {
+    .mvv-grid-container {
+        grid-template-columns: 1fr; /* Todas as colunas em uma linha vertical */
+    }
+
+    .mvv-card {
+        grid-column: 1 / 2 !important; 
+        grid-row: auto !important;
+    }
+}
+
+/* =======================================================
+   ESTILIZAÇÃO DA SEÇÃO #JORNADA (LINHA DO TEMPO)
+   ======================================================= */
+#jornada {
+    background-color: var(--cinza-claro); /* Fundo sutil */
+    padding: 80px 5%;
+    text-align: center;
+}
+
+#jornada h2 span {
+    color: var(--destaque-verde);
+}
+
+.timeline-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Container que comporta os itens da linha */
+.timeline-wrapper {
+    display: flex;
+    overflow-x: auto; /* Permite a rolagem horizontal para o efeito interativo */
+    scroll-snap-type: x mandatory; /* Ajuda a "parar" nos itens */
+    padding: 20px 0;
+    width: 100%;
+    scrollbar-width: none; /* Esconde a barra de rolagem (Firefox) */
+    -ms-overflow-style: none; /* Esconde a barra de rolagem (IE/Edge) */
+}
+
+/* Esconde a barra de rolagem (Chrome/Safari) */
+.timeline-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.timeline-item {
+    flex: 0 0 250px; /* Largura fixa para cada item (ajustável) */
+    scroll-snap-align: center;
+    position: relative;
+    text-align: center;
+    padding-top: 50px; /* Espaço para a linha e o ponto */
+    margin: 0 30px;
+}
+
+/* LINHA CONECTORA (Horizontal) */
+.timeline-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--azul-marinho);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Ponto (Círculo) em cima da linha */
+.timeline-point {
+    position: absolute;
+    top: -5px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--destaque-verde);
+    border: 3px solid var(--azul-marinho);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Conteúdo do Card */
+.timeline-content {
+    background-color: var(--branco);
+    border: 1px solid var(--cinza-claro);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    position: relative;
+    z-index: 5;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-bottom-color: var(--branco);
+}
+
+.timeline-date {
+    background-color: var(--azul-marinho);
+    color: var(--destaque-verde);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: var(--azul-marinho);
+}
+
+/* Flechas de Navegação (Interatividade) */
+.arrow {
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    font-size: 1.2em;
+}
+
+.arrow:hover {
+    background-color: var(--destaque-verde);
+    color: var(--azul-marinho);
+}
+
+.left-arrow {
+    margin-right: 20px;
+}
+
+.right-arrow {
+    margin-left: 20px;
+}
+
+/* Responsividade Mobile: Esconde as setas e deixa a rolagem livre */
+@media (max-width: 768px) {
+    .timeline-container {
+        padding: 0 10px;
+        align-items: flex-start;
+    }
+    
+    .left-arrow, .right-arrow {
+        display: none;
+    }
+    
+    /* Remove a linha horizontal no mobile */
+    .timeline-wrapper::before {
+        display: none;
+    }
+    
+    /* Faz a linha virar vertical (opcional: a rolagem horizontal é mais comum para este efeito) */
+    .timeline-item {
+        margin: 0 15px;
+        padding-top: 0;
+        text-align: left;
+        border-left: 3px solid var(--azul-marinho); /* Linha vertical */
+    }
+    
+    .timeline-point {
+        left: -11px;
+        top: 25px; 
+    }
+    
+    .timeline-content {
+        margin-top: 0;
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .timeline-content::before {
+        display: none; /* Remove o triângulo do card */
+    }
+}
+
+/* =======================================================
+   ESTILIZAÇÃO DA SEÇÃO #IMPACTO-NACIONAL (MÉTRICAS E MAPA)
+   ======================================================= */
+#impacto-nacional {
+    padding: 80px 5%;
+    background-color: var(--cinza-claro); /* Fundo suave */
+    text-align: center;
+}
+
+#impacto-nacional h2 {
+    margin-bottom: 50px;
+    color: var(--azul-marinho);
+}
+
+#impacto-nacional h2 span {
+    color: var(--destaque-verde);
+}
+
+.impacto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Coluna de Métricas (Grid de 6 Cards) */
+.metricas-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px;
+    min-width: 50%;
+}
+
+.metrica-card {
+    background-color: var(--branco);
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 28, 58, 0.05);
+    text-align: center;
+}
+
+.metrica-card .numero {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--azul-marinho);
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.metrica-card .numero span {
+    color: var(--destaque-verde);
+    font-size: 0.6em; /* Tamanho do "+" ou "%" */
+    vertical-align: top;
+    margin-left: 2px;
+}
+
+.metrica-card p {
+    font-size: 0.9em;
+    color: var(--azul-marinho);
+    opacity: 0.7;
+}
+
+/* Coluna do Mapa */
+.mapa-visual {
+    flex: 1;
+    min-width: 350px;
+    margin-left: 20px;
+    background-color: var(--branco);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 28, 58, 0.05);
+    /* Exemplo: Substitua pela imagem real do mapa ou SVG */
+    background-image: url(Imagem/Brasil.png); 
+    background-size: cover;
+    background-position: center;
+    min-height: 550px; 
+}
+
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .impacto-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .metricas-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+        width: 100%;
+        max-width: 600px;
+        order: 2; /* Coloca as métricas abaixo do mapa no mobile */
+    }
+    
+    .mapa-visual {
+        order: 1;
+        width: 100%;
+        min-height: 300px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .metricas-grid {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+}
+
+/* =======================================================
+   ESTILIZAÇÃO DA SEÇÃO #EQUIPE-FILOSOFOS
+   ======================================================= */
+#equipe-filosofos {
+    padding: 80px 5%;
+    background-color: var(--branco);
+    text-align: center;
+}
+
+#equipe-filosofos h2 {
+    margin-bottom: 10px;
+}
+
+#equipe-filosofos .subtitle {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ... dentro do bloco #equipe-filosofos ... */
+.equipe-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Define 4 colunas como padrão (desktop) */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+}
+
+/* Garante a responsividade abaixo */
+@media (max-width: 992px) {
+    .equipe-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .equipe-container {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+}
+
+.membro-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave como no modelo */
+    transition: transform 0.3s;
+}
+
+.membro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Placeholder da Foto */
+.membro-foto-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: var(--cinza-claro); /* Fundo da foto (substituir por imagem real) */
+    border-radius: 50%; /* Foto redonda ou quadrada, dependendo da sua preferência. Usaremos redondo */
+    margin: 0 auto 20px;
+    border: 4px solid var(--destaque-verde); /* Borda de destaque */
+}
+
+.membro-card h4 {
+    color: var(--azul-marinho);
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.membro-card .cargo {
+    color: var(--destaque-verde);
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.membro-card .especialidade {
+    font-size: 0.9em;
+    color: #777;
+}
+
+
+/* Responsividade: Garante que as colunas se ajustem */
+@media (max-width: 992px) {
+    .equipe-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .equipe-container {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+}
+
+/*Parte 3 Produtos*/
+
+/* =======================================================
+   ESTILOS GERAIS (Exemplo de Variáveis de Cor)
+   ======================================================= */
+:root {
+    /* Cores sugeridas que foram usadas nos exemplos anteriores */
+    --azul-marinho: #001C3A; 
+    --destaque-verde: #00CC99; 
+    --branco: #FFFFFF;
+    --cinza-claro: #F8F8F8;
+    --azul-claro: #E6F0F8;
+}
+
+/* =======================================================
+   ESTILIZAÇÃO GERAL DA PÁGINA PRODUTOS/EQUIPES
+   ======================================================= */
+/* =======================================================
+   SEÇÃO PRODUTOS (MANUTENÇÃO)
+   ======================================================= */
+#produtos {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: var(--cinza-claro); /* Fundo suave */
+}
+
+#produtos h2 {
+    font-size: 2.8em;
+    color: var(--azul-marinho);
+    margin-bottom: 10px;
+}
+
+#produtos h2 span {
+    color: var(--destaque-verde);
+}
+
+#produtos > p { /* Seletor direto para a descrição principal */
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Estilo para cada grupo de filósofos (Time) */
+.time-filosofico {
+    margin-bottom: 60px;
+    padding-top: 40px;
+    border-top: 2px solid var(--azul-marinho); /* Linha de separação entre os Times */
+}
+
+.time-filosofico h3 {
+    font-size: 2.2em;
+    color: var(--azul-marinho);
+    margin-bottom: 5px;
+}
+
+.time-descricao {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 30px !important;
+}
+
+
+/* Container de Cards (Grid) */
+.cartoes-container {
+    display: grid;
+    /* Alterado para 4 colunas em telas maiores para cards menores/melhores */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Reduzido o gap para 20px */
+    max-width: 1280px; /* Aumentado um pouco o max-width */
+    margin: 0 auto;
+    padding: 0 10px; /* Pequeno padding para evitar que encoste nas bordas da tela */
+}
+
+/* =======================================================
+   ESTILIZAÇÃO DO FLIP CARD (EFEITO 3D - IMAGEM NA FRENTE)
+   ======================================================= */
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    /* CORREÇÃO PRINCIPAL: Altura do card reduzida para 350px */
+    height: 400px; 
+    perspective: 1000px; 
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s; 
+    transform-style: preserve-3d; 
+}
+
+/* O EFEITO DE VIRAR (HOVER) */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Reduzido o padding para 20px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FACE FRONTAL (IMAGEM) */
+.flip-card-front {
+    background-color: var(--branco); 
+    color: var(--azul-marinho);
+    
+    /* MUDANÇA PRINCIPAL: Usa 'contain' para garantir que a imagem inteira apareça. 
+       Pode haver espaço vazio nas laterais ou no topo/base, mas a figura não será cortada. */
+    background-size: contain; 
+    
+    /* Centraliza a imagem no espaço do card (horizontal e verticalmente) */
+    background-position: center; 
+    
+    background-repeat: no-repeat;
+}
+
+.flip-card-front h4 {
+    font-size: 1.4em; /* Levemente reduzido */
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.85); 
+    color: var(--azul-marinho);
+    padding: 8px 5px; /* Levemente reduzido */
+    margin: 0;
+    border-radius: 0 0 10px 10px; 
+}
+
+/* FACE TRASEIRA (TEXTO/DESCRIÇÃO) */
+.flip-card-back {
+    background-color: var(--azul-marinho);
+    color: var(--destaque-verde); 
+    transform: rotateY(180deg);
+    justify-content: center;
+    padding: 20px;
+}
+
+.flip-card-back .descricao-curta {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: var(--branco); 
+}
+
+.flip-card-back .frase {
+    font-size: 1.2em; /* Levemente reduzido */
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--destaque-verde); 
+}
+
+
+/* =======================================================
+   REGRAS DE IMAGENS POR ID (Mantenha as suas URLs corretas)
+   ======================================================= */
+#socrates-img { background-image: url('Imagem/Socrates.png'); }
+#platao-img { background-image: url('Imagem/Platao.png'); }
+#aristoteles-img { background-image: url('Imagem/Aristoteles.png'); }
+#heraclito-img { background-image: url('Imagem/Heraclito.png'); }
+#pitagoras-img { background-image: url('Imagem/Pitagoras.png'); }
+#epicuro-img { background-image: url('Imagem/Epicuro.png'); }
+#seneca-img { background-image: url('Imagem/Seneca.png'); }
+#cicero-img { background-image: url('Imagem/Cicero.png'); }
+#marcoaurelio-img { background-image: url('Imagem/Marco.png'); }
+#lucrecio-img { background-image: url('Imagem/Lucrecio.png'); }
+#plotino-img { background-image: url('Imagem/Plotino.png'); }
+#epicteto-img { background-image: url('Imagem/Epicteto.png'); }
+#kant-img { background-image: url('Imagem/Kant.png'); }
+#hegel-img { background-image: url('Imagem/hegel.png'); }
+#schopenhauer-img { background-image: url('Imagem/Scho.png'); }
+#nietzsche-img { background-image: url('Imagem/Nie.png'); }
+#marx-img { background-image: url('Imagem/Karl.png'); }
+#heidegger-img { background-image: url('Imagem/Hei.png'); }
+#freire-img { background-image: url('Imagem/Paulo.png'); }
+#chaui-img { background-image: url('Imagem/Marilena.png'); }
+#konder-img { background-image: url('Imagem/Leandro.png'); }
+#pradojr-img { background-image: url('Imagem/Bento.png'); }
+#unger-img { background-image: url('Imagem/Unger.png'); }
+#reale-img { background-image: url('Imagem/Miguel.png'); }
+
+
+
+
+/* =======================================================
+   RESPONSIVIDADE DA PÁGINA PRODUTOS (AJUSTADA)
+   ======================================================= */
+@media (max-width: 1200px) {
+     .cartoes-container {
+        /* 3 colunas em telas menores que 1200px */
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media (max-width: 992px) {
+    .cartoes-container {
+        /* Muda para 2 colunas no tablet */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cartoes-container {
+        /* 1 coluna no celular */
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+    .flip-card {
+        /* Altura no mobile ajustada para 280px (mais estético para 1 coluna) */
+        height: 280px; 
+    }
+    .flip-card-front h4 {
+        font-size: 1.2em;
+    }
+    .flip-card-back .frase {
+        font-size: 1.1em;
+    }
+}
+/*Parte Contatos*/
+
+/* =======================================================
+   ESTILIZAÇÃO DA SEÇÃO CONTATO
+   ======================================================= */
+#contato-principal {
+    padding: 80px 5%;
+    background-color: var(--cinza-claro);
+}
+
+.contato-header {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contato-header h2 {
+    font-size: 2.5em;
+    color: var(--azul-marinho);
+}
+
+.contato-header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Layout Principal em Grid */
+.contato-grid {
+    display: grid;
+    /* Coluna do Formulário (2 partes) e Coluna das Info (1 parte) */
+    grid-template-columns: 2fr 1fr; 
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--branco);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilização do Formulário */
+.contato-form h3 {
+    font-size: 1.8em;
+    color: var(--destaque-verde);
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contato-form label {
+    display: block;
+    font-weight: bold;
+    color: var(--azul-marinho);
+    margin-bottom: 5px;
+}
+
+.contato-form input[type="text"],
+.contato-form input[type="email"],
+.contato-form input[type="tel"],
+.contato-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+    border-color: var(--destaque-verde);
+    outline: none;
+}
+
+.contato-form textarea {
+    resize: vertical;
+}
+
+.btn-primary-form {
+    background-color: var(--destaque-verde);
+    color: var(--azul-marinho);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-primary-form:hover {
+    background-color: #00A380;
+    transform: translateY(-1px);
+}
+
+/* Estilização dos Cards de Informação */
+.contato-info {
+    display: grid;
+    /* 2 colunas para os cards de informação (se couber) */
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+.info-card {
+    background-color: var(--azul-claro);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-icon {
+    font-size: 2.5em;
+    color: var(--azul-marinho);
+    margin-bottom: 10px;
+}
+
+.info-card h4 {
+    color: var(--azul-marinho);
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.info-card p {
+    font-size: 1em;
+    color: #444;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .contato-grid {
+        /* No tablet, formulário e info empilham */
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 600px) {
+    .contato-grid {
+        padding: 20px;
+    }
+    .contato-info {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+}
+
+/* =======================================================
+   ESTILIZAÇÃO DO SELETOR DE IDIOMA (BANDEIRAS)
+   ======================================================= */
+.language-switcher {
+    /* Mantém o display flexível */
+    display: flex;
+    gap: 10px; 
+    
+    /* Reposiciona as bandeiras ao lado da navegação no desktop */
+    margin-left: 20px; 
+    z-index: 100;
+}
+
+.language-switcher button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.language-switcher button:hover {
+    opacity: 1;
+}
+
+.language-switcher img {
+    width: 30px; 
+    height: 20px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* =======================================================
+   AJUSTE DE RESPONSIVIDADE (Menu Aberto)
+   ======================================================= */
+
+/* Reorganiza a navegação e as bandeiras no desktop */
+@media (min-width: 769px) {
+    header {
+        display: grid;
+        grid-template-columns: auto 1fr auto; /* Logo | Nav (preenche) | Bandeiras */
+        gap: 20px;
+    }
+
+    .main-nav ul {
+        display: flex;
+        justify-content: flex-end; /* Alinha os links à direita do espaço da nav */
+    }
+
+    /* Posiciona as bandeiras ao final, depois da nav */
+    .language-switcher {
+        justify-self: end;
+    }
+}
+
+
+/* Reorganiza no Mobile (Quando o menu é expandido) */
+@media (max-width: 768px) {
+    /* Garante que as bandeiras fiquem no topo, ao lado da logo */
+    header {
+        justify-content: space-between;
+    }
+    
+    .language-switcher {
+        /* Retorna ao posicionamento absoluto para ficar no canto */
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        transform: none;
+        gap: 5px;
+    }
+
+    /* Empurra o menu hambúrguer para não colidir com as bandeiras */
+    .menu-toggle {
+        order: 2; /* Move o menu-toggle após o language-switcher no grid */
+        margin-left: 50px; /* Dá espaço das bandeiras */
+        position: static; /* Remove o absoluto que possa ter sido colocado */
+    }
+
+    .main-nav {
+        /* Garante que a navegação ocupe 100% da largura quando aberta */
+        width: 100%; 
+    }
+}
+
+/* 🚨 1. SCROLL SUAVE (Funciona para todos os links âncora) */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* ==========================================
+   ANIMAÇÃO DE CARREGAMENTO (LOADER)
+   ========================================== */
+
+#page-loader {
+    /* Fixo na frente de tudo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Cor de fundo do loader */
+    background-color: var(--azul-marinho); 
+    z-index: 9999; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+/* Classe que o JS adiciona para ocultar */
+#page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-spinner {
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--amarelo-destaque);
+    /* Animação de rotação */
+    animation: spin 1.5s linear infinite; 
+}
+
+#page-loader p {
+    color: var(--amarelo-destaque);
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+/* Definição da Animação de Rotação */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+

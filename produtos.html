@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/dd1d2b7bc0.js" crossorigin="anonymous"></script>
+  <title>π-Tágoras-EQUIPE</title>
+  <link rel="shortcut icon" href="Imagem/LogoPi.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+  <script src="translation.js"></script>
+</head>
+
+<body>
+
+  <div id="page-loader">
+    <div class="loader-spinner">π</div>
+    <p>Carregando π-Tágoras...</p>
+  </div>
+
+
+  <div id="font-size-controls" class="accessibility-controls">
+    <button id="font-decrease" onclick="adjustFontSize('decrease')" aria-label="Diminuir Tamanho da Fonte"
+      title="Diminuir Fonte">A-</button>
+    <button id="font-reset" onclick="adjustFontSize('reset')" aria-label="Restaurar Tamanho da Fonte"
+      title="Restaurar Fonte">A</button>
+    <button id="font-increase" onclick="adjustFontSize('increase')" aria-label="Aumentar Tamanho da Fonte"
+      title="Aumentar Fonte">A+</button>
+  </div>
+
+  <div class="main-content-wrapper">
+    <header>
+      <div class="logo">
+        <h1>π-Tágoras</h1>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="sobre.html" data-i18n="nav_about">Sobre Nós</a></li>
+          <li><a href="produtos.html" data-i18n="nav_teams">Equipes</a></li>
+          <li><a href="contato.html" data-i18n="nav_contact">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <button onclick="setLanguage('pt')">
+          <span class="flag-icon flag-icon-br"></span>
+        </button>
+        <button onclick="setLanguage('en')">
+          <span class="flag-icon flag-icon-us"></span>
+        </button>
+        <button onclick="setLanguage('es')">
+          <span class="flag-icon flag-icon-es"></span>
+        </button>
+      </div>
+    </header>
+    <section id="produtos">
+      <h2 data-i18n="teams_title">Nossas Equipes de <span>Pensadores</span></h2>
+      <p data-i18n="teams_subtitle">Escolha um dos grupos abaixo para ver os 6 pilares de conhecimento que guiam nossa
+        consultoria:</p>
+      <div class="time-filosofico time-grego" id="time-grego">
+        <h3 data-i18n="team_grego_title">Time Grego 🧠</h3>
+        <p class="time-descricao" data-i18n="team_grego_desc">Os pioneiros: a base do raciocínio crítico, da lógica e do
+          autoconhecimento.</p>
+        <div class="cartoes-container">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="socrates-img">
+
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="socrates_desc"></p>
+                <p class="frase" data-i18n="socrates_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="platao-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="platao_desc"></p>
+                <p class="frase" data-i18n="platao_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="aristoteles-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="aristoteles_desc"></p>
+                <p class="frase" data-i18n="aristoteles_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="heraclito-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="heraclito_desc"></p>
+                <p class="frase" data-i18n="heraclito_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="pitagoras-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="pitagoras_desc"></p>
+                <p class="frase" data-i18n="pitagoras_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="epicuro-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="epicuro_desc"></p>
+                <p class="frase" data-i18n="epicuro_frase"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="time-filosofico time-romano" id="time-romano">
+        <h3 data-i18n="team_romano_title">Time Romano ⚖️</h3>
+        <p class="time-descricao" data-i18n="team_romano_desc">Os mestres da sabedoria aplicada à vida real: virtude,
+          ética e controle emocional.</p>
+        <div class="cartoes-container">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="seneca-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="seneca_desc"></p>
+                <p class="frase" data-i18n="seneca_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="cicero-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="cicero_desc"></p>
+                <p class="frase" data-i18n="cicero_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="marcoaurelio-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="marcoaurelio_desc"></p>
+                <p class="frase" data-i18n="marcoaurelio_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="epicteto-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="epicteto_desc"></p>
+                <p class="frase" data-i18n="epicteto_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="lucrecio-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="lucrecio_desc"></p>
+                <p class="frase" data-i18n="lucrecio_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="plotino-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="plotino_desc"></p>
+                <p class="frase" data-i18n="plotino_frase"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="time-filosofico time-alemao" id="time-alemao">
+        <h3 data-i18n="team_alemao_title">Time Alemão ⚙️</h3>
+        <p class="time-descricao" data-i18n="team_alemao_desc">Os estrategistas do pensamento: profundidade conceitual,
+          idealismo e crítica radical.</p>
+        <div class="cartoes-container">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="kant-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="kant_desc"></p>
+                <p class="frase" data-i18n="kant_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="hegel-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="hegel_desc"></p>
+                <p class="frase" data-i18n="hegel_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="schopenhauer-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="schopenhauer_desc"></p>
+                <p class="frase" data-i18n="schopenhauer_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="nietzsche-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="nietzsche_desc"></p>
+                <p class="frase" data-i18n="nietzsche_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="marx-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="marx_desc"></p>
+                <p class="frase" data-i18n="marx_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="heidegger-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="heidegger_desc"></p>
+                <p class="frase" data-i18n="heidegger_frase"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="time-filosofico time-brasil" id="time-brasil">
+        <h3 data-i18n="team_brasil_title">Time Brasileiro 🌎</h3>
+        <p class="time-descricao" data-i18n="team_brasil_desc">Os pensadores da prática: filosofia com impacto social,
+          política e educacional.</p>
+        <div class="cartoes-container">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="freire-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="freire_desc"></p>
+                <p class="frase" data-i18n="freire_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="chaui-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="chaui_desc"></p>
+                <p class="frase" data-i18n="chaui_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="konder-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="konder_desc"></p>
+                <p class="frase" data-i18n="konder_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="pradojr-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="pradojr_desc"></p>
+                <p class="frase" data-i18n="pradojr_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="unger-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="unger_desc"></p>
+                <p class="frase" data-i18n="unger_frase"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" id="reale-img">
+              </div>
+              <div class="flip-card-back">
+                <p class="descricao-curta" data-i18n="reale_desc"></p>
+                <p class="frase" data-i18n="reale_frase"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-footer">
+        <div class="footer-col about-col">
+          <div class="logo">
+            <h1>π-Tágoras</h1>
+          </div>
+          <p class="slogan" data-i18n="footerSlogan"><strong>Filosofia para uma vida mais Sábia.</strong></p>
+          <p data-i18n="footerAddress">Endereço: Rua Exemplo, 123 - Cidade/Estado</p>
+          <p class="copyright" data-i18n="footerCopy">
+            &copy; 2025 Pitágoras - Todos os direitos reservados.
+          </p>
+        </div>
+        <div class="footer-col links-col">
+          <h4 data-i18n="footerNavTitle">Navegação</h4>
+          <ul>
+            <li><a href="#home" data-i18n="footerLinkHome">Home</a></li>
+            <li><a href="#sobre" data-i18n="footerLinkSobre">Sobre Nós</a></li>
+            <li><a href="#areas" data-i18n="footerLinkAreas">Áreas de Consultoria</a></li>
+            <li><a href="#etica" data-i18n="footerLinkEtica">Ética e Pilares</a></li>
+            <li><a href="#contato" data-i18n="footerLinkContato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col contact-col">
+          <h4 data-i18n="footerContactTitle">Fale Conosco</h4>
+          <p data-i18n="footerEmail">Email: contato@pitagoras.com</p>
+          <p data-i18n="footerPhone">Telefone: (11) 1234-5678</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

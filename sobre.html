@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dd1d2b7bc0.js" crossorigin="anonymous"></script>
+    <title>π-Tágoras-SOBRENÓS</title>
+    <link rel="shortcut icon" href="Imagem/LogoPi.png" type="image/x-icon">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="translation.js"></script>
+</head>
+
+<body>
+
+    <div id="page-loader">
+        <div class="loader-spinner">π</div>
+        <p>Carregando π-Tágoras...</p>
+    </div>
+
+
+    <div id="font-size-controls" class="accessibility-controls">
+        <button id="font-decrease" onclick="adjustFontSize('decrease')" aria-label="Diminuir Tamanho da Fonte"
+            title="Diminuir Fonte">A-</button>
+        <button id="font-reset" onclick="adjustFontSize('reset')" aria-label="Restaurar Tamanho da Fonte"
+            title="Restaurar Fonte">A</button>
+        <button id="font-increase" onclick="adjustFontSize('increase')" aria-label="Aumentar Tamanho da Fonte"
+            title="Aumentar Fonte">A+</button>
+    </div>
+
+    <div class="main-content-wrapper">
+        <header>
+            <div class="logo">
+                <h1>π-Tágoras</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" data-i18n="navHome">Home</a></li>
+                    <li><a href="sobre.html" data-i18n="navSobre">Sobre Nós</a></li>
+                    <li><a href="produtos.html" data-i18n="navEquipes">Equipes</a></li>
+                    <li><a href="contato.html" data-i18n="navContato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <button onclick="setLanguage('pt')">
+                    <span class="flag-icon flag-icon-br"></span>
+                </button>
+                <button onclick="setLanguage('en')">
+                    <span class="flag-icon flag-icon-us"></span>
+                </button>
+                <button onclick="setLanguage('es')">
+                    <span class="flag-icon flag-icon-es"></span>
+                </button>
+            </div>
+        </header>
+        
+        <section id="historia">
+            <h2 data-i18n="historyTitle">Nossa <span>Trajetória</span></h2>
+            <div class="historia-container">
+                <div class="historia-texto">
+                    <h3 data-i18n="historySubtitle1">A Origem do Raciocínio Aplicado</h3>
+                    <p data-i18n="historyP1">A PITÁGORAS nasceu da convicção de que a filosofia não deve estar confinada
+                        ao
+                        meio acadêmico, mas
+                        sim ser uma ferramenta prática e poderosa para o mundo dos negócios e para o desenvolvimento
+                        pessoal.</p>
+                    <p data-i18n="historyP2">Fundada em 2010 por um grupo de Estudantes, nosso foco inicial foi oferecer
+                        workshops sobre ética e
+                        tomada de decisão para CEOs e líderes, abordando dilemas complexos que a gestão tradicional não
+                        conseguia resolver. Rapidamente, nos tornamos referência em aplicar a lógica estoica e
+                        aristotélica
+                        em contextos corporativos.</p>
+                    <h3 data-i18n="historySubtitle2">Evolução e Expansão</h3>
+                    <p data-i18n="historyP3">Em 2018, expandimos nossos serviços para incluir consultoria estratégica de
+                        longo prazo, ajudando
+                        empresas a definir e manter seus valores culturais em meio a rápidas transformações
+                        tecnológicas.
+                        Nossa trajetória é marcada pelo compromisso contínuo com a excelência do pensamento e a
+                        construção
+                        de culturas organizacionais que promovem a sabedoria e a justiça (Dikaiosyne).</p>
+                    <p data-i18n="historyP4">Hoje, a PITÁGORAS é sinônimo de clareza e propósito, apoiando líderes a
+                        conduzir seus negócios de
+                        forma mais consciente, racional e humana. Seguimos investindo em pesquisa e desenvolvimento para
+                        transformar o dilema em convicção e a complexidade em simplicidade.</p>
+                </div>
+                <div class="historia-imagens">
+                    <div class="imagem-destaque"></div>
+                    <div class="imagem-secundaria"></div>
+                </div>
+            </div>
+        </section>
+        <section id="mvv-cards">
+            <h2 data-i18n="mvvTitle">Nossos Pilares de <span>Filosofia</span> Aplicada</h2>
+            <div class="mvv-grid-container">
+                <div class="mvv-card mission-card">
+                    <i class="fas fa-bullseye mvv-icon"></i>
+                    <h3 data-i18n="mvvMissionTitle">Nossa Missão</h3>
+                    <p data-i18n="mvvMissionText">Promover o pensamento crítico e o autoconhecimento através do ensino e
+                        da
+                        prática filosófica,
+                        ajudando pessoas e organizações a compreenderem melhor o mundo, suas ações e suas ideias.</p>
+                </div>
+                <div class="mvv-card vision-card">
+                    <i class="fas fa-eye mvv-icon"></i>
+                    <h3 data-i18n="mvvVisionTitle">Nossa Visão</h3>
+                    <p data-i18n="mvvVisionText">Ser reconhecida como a principal referência em filosofia aplicada no
+                        Brasil, inspirando indivíduos e
+                        empresas a pensarem de forma mais consciente, racional e humana.</p>
+                </div>
+                <div class="mvv-card values-card">
+                    <i class="fas fa-trophy mvv-icon"></i>
+                    <h3 data-i18n="mvvValuesTitle">Nossos Valores</h3>
+                    <ul>
+                        <li><Strong data-i18n="mvvValue1Title">Sabedoria:</Strong> <span
+                                data-i18n="mvvValue1Desc">Buscamos
+                                compreender antes de julgar.</span></li>
+                        <li><Strong data-i18n="mvvValue2Title">Ética:</Strong> <span data-i18n="mvvValue2Desc">Pautamos
+                                nossas ações em princípios morais e respeito mútuo.</span></li>
+                        <li><Strong data-i18n="mvvValue3Title">Raciocínio Crítico:</Strong> <span
+                                data-i18n="mvvValue3Desc">Valorizamos a dúvida como caminho para o conhecimento.</span>
+                        </li>
+                        <li><Strong data-i18n="mvvValue4Title">Humanidade:</Strong> <span
+                                data-i18n="mvvValue4Desc">Colocamos o ser humano no centro das reflexões.</span></li>
+                        <li><Strong data-i18n="mvvValue5Title">Conhecimento Contínuo:</Strong> <span
+                                data-i18n="mvvValue5Desc">Acreditamos que aprender é um processo sem fim.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="jornada" class="timeline-section">
+            <h2 data-i18n="timelineTitle">Nossa <span>Evolução</span> Filosófica</h2>
+            <div class="timeline-container">
+                <button class="arrow left-arrow" aria-label="Anterior"><i class="fas fa-arrow-left"></i></button>
+                <div class="timeline-wrapper">
+                    <div class="timeline-item">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-i18n="timelineYear1">2010</div>
+                            <p data-i18n="timelineDesc1"><strong>Fundação da PITÁGORAS:</strong> Início das atividades
+                                como
+                                workshops de Ética e
+                                Liderança, focados em filosofia estoica.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-i18n="timelineYear2">2014</div>
+                            <p data-i18n="timelineDesc2"><strong>Primeira Publicação:</strong> Lançamento do e-book "O
+                                Raciocínio de Aristóteles nos
+                                Negócios", marcando nossa expansão digital.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-i18n="timelineYear3">2018</div>
+                            <p data-i18n="timelineDesc3"><strong>Consultoria Estratégica:</strong> Ampliação do foco
+                                para
+                                consultoria de longo prazo
+                                em cultura e valores corporativos.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-i18n="timelineYear4">2023</div>
+                            <p data-i18n="timelineDesc4"><strong>Inovação:</strong> Implementação da área de
+                                <Strong>"Filosofia da
+                                    Tecnologia"</Strong>, abordando ética em IA e transformação digital.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-i18n="timelineYear5">HOJE</div>
+                            <p data-i18n="timelineDesc5"><strong>Liderança:</strong> Consolidada como referência em
+                                filosofia aplicada no Brasil e
+                                parceira de grandes organizações.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="arrow right-arrow" aria-label="Próximo"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </section>
+        <section id="impacto-nacional">
+            <h2 data-i18n="impactTitle">Nosso Impacto <span>Global</span></h2>
+            <div class="impacto-container">
+                <div class="metricas-grid">
+                    <div class="metrica-card">
+                        <div class="numero" data-i18n="metricaGlobalNum1">12 <span>+</span></div>
+                        <p data-i18n="metricaGlobalText1">Países com consultoria estratégica</p>
+                    </div>
+                    <div class="metrica-card">
+                        <div class="numero" data-i18n="metricaGlobalNum2">15 <span>+</span></div>
+                        <p data-i18n="metricaGlobalText2">Anos no mercado de consultoria de liderança</p>
+                    </div>
+                    <div class="metrica-card">
+                        <div class="numero" data-i18n="metricaGlobalNum3">2.500 <span>+</span></div>
+                        <p data-i18n="metricaGlobalText3">Líderes e CEOs treinados em Ética</p>
+                    </div>
+                    <div class="metrica-card">
+                        <div class="numero" data-i18n="metricaGlobalNum4">70 <span>+</span></div>
+                        <p data-i18n="metricaGlobalText4">Empresas com Framework de Valores desenvolvido</p>
+                    </div>
+                    <div class="metrica-card">
+                        <div class="numero" data-i18n="metricaGlobalNum5">180 <span>+</span></div>
+                        <p data-i18n="metricaGlobalText5">Workshops de Raciocínio Crítico e Estoicismo</p>
+                    </div>
+                    <div class="metrica-card">
+                        <div class="numero" data-i18n="metricaGlobalNum6">98 <span>%</span></div>
+                        <p data-i18n="metricaGlobalText6">De satisfação em programas de mentoria</p>
+                    </div>
+                </div>
+                <div class="mapa-visual">
+                </div>
+            </div>
+        </section>
+        <section id="equipe-filosofos">
+            <h2 data-i18n="teamTitleNew">Os Pensadores <span>da PITÁGORAS</span></h2>
+            <p class="subtitle" data-i18n="teamSubtitleNew">Nossa equipe é formada por mestres e doutores em filosofia
+                com
+                profunda experiência em
+                consultoria estratégica.</p>
+            <div class="equipe-container">
+                <div class="membro-card">
+                    <div class="membro-foto-placeholder"></div>
+                    <h4 data-i18n="membro1Nome">Arthur Emmerich Lamas</h4>
+                    <p class="cargo" data-i18n="membro1Cargo">CEO e Responsável por estilizar o site</p>
+                    <p class="especialidade" data-i18n="membro1Espec">Ética Aplicada e Lógica Estoica</p>
+                </div>
+                <div class="membro-card">
+                    <div class="membro-foto-placeholder"></div>
+                    <h4 data-i18n="membro2Nome">Platão Ferreira</h4>
+                    <p class="cargo" data-i18n="membro2Cargo">Diretor de Estratégia</p>
+                    <p class="especialidade" data-i18n="membro2Espec">Teoria do Conhecimento e Liderança</p>
+                </div>
+                <div class="membro-card">
+                    <div class="membro-foto-placeholder"></div>
+                    <h4 data-i18n="membro3Nome">Hipátia Nunes</h4>
+                    <p class="cargo" data-i18n="membro3Cargo">Consultora Sênior</p>
+                    <p class="especialidade" data-i18n="membro3Espec">Filosofia da Ciência e Tomada de Decisão</p>
+                </div>
+                <div class="membro-card">
+                    <div class="membro-foto-placeholder"></div>
+                    <h4 data-i18n="membro4Nome">Aristóteles Mello</h4>
+                    <p class="cargo" data-i18n="membro4Cargo">Especialista em Ética de IA</p>
+                    <p class="especialidade" data-i18n="membro4Espec">Justiça Algorítmica e Raciocínio Formal</p>
+                </div>
+                <div class="membro-card">
+                    <div class="membro-foto-placeholder"></div>
+                    <h4 data-i18n="membro5Nome">Maria Arendt</h4>
+                    <p class="cargo" data-i18n="membro5Cargo">Líder de Pesquisa</p>
+                    <p class="especialidade" data-i18n="membro5Espec">Filosofia Política e Cultura Organizacional</p>
+                </div>
+                <div class="membro-card">
+                    <div class="membro-foto-placeholder"></div>
+                    <h4 data-i18n="membro6Nome">Immanuel Kant</h4>
+                    <p class="cargo" data-i18n="membro6Cargo">Consultor de Ética Prática</p>
+                    <p class="especialidade" data-i18n="membro6Espec">Dilemas Morais e Imperativo Categórico</p>
+                </div>
+                <div class="membro-card">
+                    <div class="membro-foto-placeholder"></div>
+                    <h4 data-i18n="membro7Nome">Simon Beauvoir</h4>
+                    <p class="cargo" data-i18n="membro7Cargo">Mentora Executiva</p>
+                    <p class="especialidade" data-i18n="membro7Espec">Existencialismo e Autoconhecimento</p>
+                </div>
+                <div class="membro-card">
+                    <div class="membro-foto-placeholder"></div>
+                    <h4 data-i18n="membro8Nome">Laozi Chen</h4>
+                    <p class="cargo" data-i18n="membro8Cargo">Estrategista de Relacionamento</p>
+                    <p class="especialidade" data-i18n="membro8Espec">Filosofia Oriental e Gestão de Conflitos</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-col about-col">
+                    <h3>PITÁGORAS</h3>
+                    <p data-i18n="footerSlogan"><strong>Filosofia para uma vida mais Sábia.</strong></p>
+                    <p data-i18n="footerAddress">Endereço: Rua Exemplo, 123 - Cidade/Estado</p>
+                    <p class="copyright">
+                        <span data-i18n="footerCopy">&copy; 2025 Pitágoras - Todos os direitos reservados.</span>
+                    </p>
+                </div>
+                <div class="footer-col links-col">
+                    <h4 data-i18n="footerNavTitle">Navegação</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="footerLinkHome">Home</a></li>
+                        <li><a href="#sobre" data-i18n="footerLinkSobre">Sobre Nós</a></li>
+                        <li><a href="#areas" data-i18n="footerLinkAreas">Áreas de Consultoria</a></li>
+                        <li><a href="#etica" data-i18n="footerLinkEtica">Ética e Pilares</a></li>
+                        <li><a href="#contato" data-i18n="footerLinkContato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h4 data-i18n="footerContactTitle">Fale Conosco</h4>
+                    <p><span data-i18n="footerEmail">Email:</span> <a
+                            href="mailto:contato@pitagoras.com">contato@pitagoras.com</a></p>
+                    <p data-i18n="footerPhone">Telefone: (11) 1234-5678</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        // --- JAVASCRIPT para Linha do Tempo Interativa ---
+        const timelineWrapper = document.querySelector('.timeline-wrapper');
+        const leftArrow = document.querySelector('.left-arrow');
+        const rightArrow = document.querySelector('.right-arrow');
+
+        if (timelineWrapper && leftArrow && rightArrow) {
+            // Largura de um item para rolagem (250px do item + 60px de margem)
+            const scrollAmount = 310;
+
+            rightArrow.addEventListener('click', () => {
+                timelineWrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+
+            leftArrow.addEventListener('click', () => {
+                timelineWrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
+        // --- FIM do JAVASCRIPT Linha do Tempo ---
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dd1d2b7bc0.js" crossorigin="anonymous"></script>
+    <title>π-Tágoras-HOME</title>
+    <link rel="shortcut icon" href="Imagem/LogoPi.png" type="image/x-icon">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="translation.js"></script>
+</head>
+
+<body>
+
+    <div id="page-loader">
+        <div class="loader-spinner">π</div>
+        <p>Carregando π-Tágoras...</p>
+    </div>
+
+    <div id="font-size-controls" class="accessibility-controls">
+        <button id="font-decrease" onclick="adjustFontSize('decrease')" aria-label="Diminuir Tamanho da Fonte"
+            title="Diminuir Fonte">A-</button>
+        <button id="font-reset" onclick="adjustFontSize('reset')" aria-label="Restaurar Tamanho da Fonte"
+            title="Restaurar Fonte">A</button>
+        <button id="font-increase" onclick="adjustFontSize('increase')" aria-label="Aumentar Tamanho da Fonte"
+            title="Aumentar Fonte">A+</button>
+    </div>
+
+    <div class="main-content-wrapper">
+        <header>
+            <div class="logo">
+                <h1>π-Tágoras</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" data-i18n="navHome">Home</a></li>
+                    <li><a href="sobre.html" data-i18n="navSobre">Sobre Nós</a></li>
+                    <li><a href="produtos.html" data-i18n="navEquipes">Equipes</a></li>
+                    <li><a href="contato.html" data-i18n="navContato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+
+                <button onclick="setLanguage('pt')">
+                    <span class="flag-icon flag-icon-br"></span>
+                </button>
+                <button onclick="setLanguage('en')">
+                    <span class="flag-icon flag-icon-us"></span>
+                </button>
+                <button onclick="setLanguage('es')">
+                    <span class="flag-icon flag-icon-es"></span>
+                </button>
+            </div>
+        </header>
+
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <p class="hero-subtitle" data-i18n="heroTag">π-Tágoras</p>
+                <h1 class="hero-title" data-i18n="heroTitle">
+                    <span>Harmonia</span>
+                    <span class="highlight-text">Para o Corpo</span>
+                    E a
+                    <span class="highlight-text">Mente</span>
+                </h1>
+                <p class="hero-description" data-i18n="heroDescription">
+                    A Pitágoras auxilia no desenvolvimento do raciocínio crítico e na reflexão ética, aplicando
+                    conceitos
+                    filosóficos para aprimorar a liderança e a tomada de decisões na sua empresa.
+                </p>
+                <a href="contato.html" class="cta-button" data-i18n="heroCta">Agendar Demonstração</a>
+            </div>
+            <div class="hero-image">
+                <img src="Imagem/LogoPi-removebg-preview.png" alt="Imagem de destaque da Pitágoras"
+                    class="img-responsive">
+            </div>
+        </section>
+        <section class="times">
+            <h2 data-i18n="timesTitle">Áreas de Consultoria</h2>
+            <p class="section-subtitle" data-i18n="timesSubtitle">A Pitágoras é composta por equipes especializadas,
+                cada
+                uma focada em uma área
+                fundamental da filosofia aplicada para aprimorar o seu negócio com precisão e profundidade.</p>
+            <div class="times-container">
+                <div class="time time-grego">
+                    <a href="produtos.html">
+                        <div class="time-logo" data-i18n="timeGregoLogo">GREGO</div>
+                    </a>
+                    <p class="time-title" data-i18n="timeGregoTitle">Time Grego: Filosofia Clássica</p>
+                    <a href="produtos.html" class="time-link" data-i18n="timeLink">Ver Mais</a>
+                </div>
+                <div class="time time-romano">
+                    <a href="produtos.html">
+                        <div class="time-logo" data-i18n="timeRomanoLogo">ROMANO</div>
+                    </a>
+                    <p class="time-title" data-i18n="timeRomanoTitle">Time Romano: Ética e Direito</p>
+                    <a href="produtos.htmlhegel-img" class="time-link" data-i18n="timeLink">Ver Mais</a>
+                </div>
+                <div class="time time-alemao">
+                    <a href="produtos.html">
+                        <div class="time-logo" data-i18n="timeAlemaoLogo">ALEMÃO</div>
+                    </a>
+                    <p class="time-title" data-i18n="timeAlemaoTitle">Time Alemão: Lógica e Razão</p>
+                    <a href="produtos.html" class="time-link" data-i18n="timeLink">Ver Mais</a>
+                </div>
+                <div class="time time-brasileiro">
+                    <a href="produtos.html">
+                        <div class="time-logo" data-i18n="timeBrasilLogo">BRASIL</div>
+                    </a>
+                    <p class="time-title" data-i18n="timeBrasilTitle">Time Brasileiro: Pensamento Contemporâneo</p>
+                    <a href="produtos.html" class="time-link" data-i18n="timeLink">Ver Mais</a>
+                </div>
+            </div>
+        </section>
+        <section class="presenca-nacional">
+            <h2 data-i18n="presTitle">Nossa Presença <span>Nacional</span></h2>
+            <div class="destaque-parceiros">
+                <p data-i18n="presPartnersText">Parcerias estratégicas com grandes instituições para levar o pensamento
+                    crítico e a ética a todo o
+                    Brasil.</p>
+            </div>
+            <div class="parceiros-logos">
+                <img src="Imagem/ETEClogo.jpg" alt="Logo Parceiro 1" class="logo-item">
+                <img src="Imagem/CPS.jpg" alt="Logo Parceiro 2" class="logo-item">
+                <img src="Imagem/images.png" alt="Logo Parceiro 3" class="logo-item">
+            </div>
+            <div class="metricas-container">
+                <div class="metrica-card">
+                    <h3 class="metrica-numero">12<span>+</span></h3>
+                    <p class="metrica-texto" data-i18n="metricaState">Estados do Brasil utilizam nossas soluções</p>
+                </div>
+                <div class="metrica-card">
+                    <h3 class="metrica-numero">20<span>+</span></h3>
+                    <p class="metrica-texto" data-i18n="metricaYears">Anos no mercado de Filosofia Aplicada</p>
+                </div>
+                <div class="metrica-card">
+                    <h3 class="metrica-numero">70<span>+</span></h3>
+                    <p class="metrica-texto" data-i18n="metricaClients">Clientes e Empresas Atendidos</p>
+                </div>
+                <div class="metrica-card">
+                    <h3 class="metrica-numero">2.000<span>+</span></h3>
+                    <p class="metrica-texto" data-i18n="metricaUsers">Pessoas ativas em nossos cursos e palestras</p>
+                </div>
+            </div>
+            <a href="contato.html" class="cta-button" data-i18n="presCta">Agendar Demonstração</a>
+        </section>
+        <section id="etica">
+            <h2 data-i18n="eticaTitle">Nossa <span>Ética</span></h2>
+            <div class="pilares-container">
+                <div class="pilar-card">
+                    <div class="pilar-icon">💡</div>
+                    <h3 data-i18n="pilarRazaoTitle">Razão e Lógica</h3>
+                    <p data-i18n="pilarRazaoText">Guiamos todas as decisões e estratégias com base em princípios lógicos
+                        sólidos, incentivando a
+                        análise racional e o pensamento crítico.</p>
+                    <a href="#" class="pilar-link" data-i18n="pilarLink">Ver os benefícios</a>
+                </div>
+                <div class="pilar-card">
+                    <div class="pilar-icon">⚖️</div>
+                    <h3 data-i18n="pilarJusticaTitle">Justiça e Equidade</h3>
+                    <p data-i18n="pilarJusticaText">Promovemos ambientes de trabalho éticos e justos, garantindo que a
+                        integridade e a transparência
+                        sejam o alicerce de cada interação.</p>
+                    <a href="#" class="pilar-link" data-i18n="pilarLink">Ver os benefícios</a>
+                </div>
+                <div class="pilar-card">
+                    <div class="pilar-icon">🌱</div>
+                    <h3 data-i18n="pilarDesenTitle">Desenvolvimento Contínuo</h3>
+                    <p data-i18n="pilarDesenText">Focamos na melhoria constante, aplicando a filosofia como uma
+                        ferramenta
+                        de auto-aperfeiçoamento
+                        pessoal e profissional para todos os colaboradores.</p>
+                    <a href="#" class="pilar-link" data-i18n="pilarLink">Ver os benefícios</a>
+                </div>
+            </div>
+        </section>
+        <section id="depoimentos">
+            <h2 data-i18n="depoTitle">Depoimentos de <span>Clientes</span></h2>
+            <div class="carousel-container">
+                <button class="carousel-arrow left-arrow" onclick="mudarSlideFade(-1)">❮</button>
+                <div class="carousel-fade-track">
+                    <div class="depoimento-slide-fade active">
+                        <p class="depoimento-texto" data-i18n="depo1Text">“A consultoria filosófica da Pitágoras
+                            transformou
+                            a forma como nossa
+                            equipe lida com dilemas éticos. O raciocínio crítico aplicado elevou o nível das nossas
+                            decisões
+                            estratégicas. Recomendo fortemente!”</p>
+                        <span class="depoimento-autor" data-i18n="depo1Author">- Maria Clara Mendes, CEO da
+                            InnovaTech</span>
+                    </div>
+                    <div class="depoimento-slide-fade">
+                        <p class="depoimento-texto" data-i18n="depo2Text">“Com o apoio da Pitágoras, conseguimos
+                            estruturar
+                            nossos valores de
+                            forma sólida e coerente. Foi um investimento que deu clareza e propósito à nossa cultura
+                            corporativa.”</p>
+                        <span class="depoimento-autor" data-i18n="depo2Author">- João Paulo Silveira, Diretor de
+                            RH</span>
+                    </div>
+                    <div class="depoimento-slide-fade">
+                        <p class="depoimento-texto" data-i18n="depo3Text">“Os workshops sobre Filosofia Antiga e
+                            Liderança
+                            foram um diferencial.
+                            Saímos inspirados a buscar a sabedoria e a humanidade em cada projeto. Excelente trabalho!”
+                        </p>
+                        <span class="depoimento-autor" data-i18n="depo3Author">- Ana Beatriz Costa, Gerente de
+                            Projetos</span>
+                    </div>
+                </div>
+                <button class="carousel-arrow right-arrow" onclick="mudarSlideFade(1)">❯</button>
+            </div>
+            <div class="carousel-indicators-fade">
+                <span class="dot active" onclick="mostrarSlideFade(1)"></span>
+                <span class="dot" onclick="mostrarSlideFade(2)"></span>
+                <span class="dot" onclick="mostrarSlideFade(3)"></span>
+            </div>
+        </section>
+        <section class="faq">
+            <h2 data-i18n="faqTitle">Perguntas <span>Frequentes</span></h2>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-i18n="faqQ1">O que a empresa Pitágoras faz?</span> <span class="seta">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-i18n="faqA1">A Pitágoras oferece cursos, palestras, consultorias e conteúdos voltados à
+                        filosofia e ao pensamento
+                        crítico, aplicando conceitos filosóficos à vida cotidiana e ao ambiente profissional.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-i18n="faqQ2">Por que o nome “Pitágoras”?</span> <span class="seta">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-i18n="faqA2">O nome homenageia o filósofo e matemático grego Pitágoras, símbolo da harmonia
+                        entre razão, lógica e
+                        espiritualidade — pilares fundamentais do nosso trabalho.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-i18n="faqQ3">A filosofia pode ser aplicada nas empresas?</span> <span
+                        class="seta">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-i18n="faqA3">Sim! A filosofia ajuda líderes e equipes a refletirem sobre ética, propósito,
+                        tomada de decisão e
+                        convivência, tornando o ambiente mais equilibrado e produtivo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-i18n="faqQ4">Quem pode participar dos cursos?</span> <span class="seta">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-i18n="faqA4">Todos! Desde estudantes curiosos por filosofia até profissionais interessados
+                        em
+                        aprimorar o
+                        pensamento crítico e a visão de mundo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-i18n="faqQ5">A Pitágoras trabalha apenas com filosofia antiga?</span> <span
+                        class="seta">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-i18n="faqA5">Não. Embora valorizemos os clássicos, também exploramos correntes modernas e
+                        contemporâneas,
+                        conectando as ideias antigas aos desafios atuais.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-i18n="faqQ6">Como posso entrar em contato?</span> <span class="seta">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-i18n="faqA6">Você pode entrar em contato pelo nosso site, e-mail ou redes sociais. Teremos
+                        prazer em conversar
+                        sobre filosofia e como ela pode transformar sua vida ou seu negócio.</p>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <button data-i18n="btnAgenda">Baixar Sistema de Agendamento</button>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-col about-col">
+                    <h3>PITÁGORAS</h3>
+                    <p data-i18n="footerSlogan"><strong>Filosofia para uma vida mais Sábia.</strong></p>
+                    <p data-i18n="footerAddress">Endereço: Rua Exemplo, 123 - Cidade/Estado</p>
+                    <p class="copyright">
+                        <span data-i18n="footerCopy">&copy; 2025 Pitágoras - Todos os direitos reservados.</span>
+                    </p>
+                </div>
+                <div class="footer-col links-col">
+                    <h4 data-i18n="footerNavTitle">Navegação</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="footerLinkHome">Home</a></li>
+                        <li><a href="#sobre" data-i18n="footerLinkSobre">Sobre Nós</a></li>
+                        <li><a href="#areas" data-i18n="footerLinkAreas">Áreas de Consultoria</a></li>
+                        <li><a href="#etica" data-i18n="footerLinkEtica">Ética e Pilares</a></li>
+                        <li><a href="#contato" data-i18n="footerLinkContato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h4 data-i18n="footerContactTitle">Fale Conosco</h4>
+                    <p data-i18n="footerEmail">Email: <a href="mailto:contato@pitagoras.com">contato@pitagoras.com</a>
+                    </p>
+                    <p data-i18n="footerPhone">Telefone: (11) 1234-5678</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        // --- JavaScript CORRIGIDO para o Acordeão FAQ (Com rotação da seta) ---
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(q => {
+            const answer = q.nextElementSibling;
+            const seta = q.querySelector(".seta");
+            answer.style.display = "none";
+            if (seta) {
+                seta.style.transform = "rotate(0deg)";
+            }
+
+            q.addEventListener("click", () => {
+                const isVisible = answer.style.display === "block";
+                answer.style.display = isVisible ? "none" : "block";
+
+                if (seta) {
+                    seta.style.transform = isVisible ? "rotate(0deg)" : "rotate(180deg)";
+                }
+            });
+        });
+        // --- Fim do Código do FAQ ---
+
+        // --- JAVASCRIPT para o Menu Hambúrguer (Mobile) ---
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.main-nav');
+
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('open');
+                const isMenuOpen = nav.classList.contains('open');
+
+                const icon = menuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars', !isMenuOpen);
+                    icon.classList.toggle('fa-times', isMenuOpen);
+                }
+            });
+        }
+        // --- FIM do JAVASCRIPT Menu Hambúrguer ---
+
+
+        // --- JAVASCRIPT para o Carrossel com Efeito FADE ---
+        let slideIndexFade = 1;
+        const slidesFade = document.getElementsByClassName("depoimento-slide-fade");
+        const dotsFade = document.getElementsByClassName("dot");
+
+        if (slidesFade.length > 0) {
+            mostrarSlidesFade(slideIndexFade);
+        }
+
+        function mudarSlideFade(n) {
+            mostrarSlidesFade(slideIndexFade += n);
+        }
+
+        function mostrarSlideFade(n) {
+            mostrarSlidesFade(n);
+        }
+
+        function mostrarSlidesFade(n) {
+            if (slidesFade.length === 0) return;
+
+            if (n > slidesFade.length) {
+                slideIndexFade = 1
+            } else if (n < 1) {
+                slideIndexFade = slidesFade.length
+            } else {
+                slideIndexFade = n;
+            }
+
+            for (let i = 0; i < slidesFade.length; i++) {
+                slidesFade[i].classList.remove('active');
+                if (dotsFade[i]) {
+                    dotsFade[i].classList.remove('active');
+                }
+            }
+
+            slidesFade[slideIndexFade - 1].classList.add('active');
+            if (dotsFade[slideIndexFade - 1]) {
+                dotsFade[slideIndexFade - 1].classList.add('active');
+            }
+        }
+        // --- FIM do JavaScript FADE ---
+
+
+    </script>
+</body>
+</html>

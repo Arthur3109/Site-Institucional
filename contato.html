@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/dd1d2b7bc0.js" crossorigin="anonymous"></script>
+  <title>π-Tágoras - Contato</title>
+  <link rel="shortcut icon" href="Imagem/LogoPi.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div id="page-loader">
+    <div class="loader-spinner">π</div>
+    <p>Carregando π-Tágoras...</p>
+  </div>
+
+
+  <div id="font-size-controls" class="accessibility-controls">
+    <button id="font-decrease" onclick="adjustFontSize('decrease')" aria-label="Diminuir Tamanho da Fonte"
+      title="Diminuir Fonte">A-</button>
+    <button id="font-reset" onclick="adjustFontSize('reset')" aria-label="Restaurar Tamanho da Fonte"
+      title="Restaurar Fonte">A</button>
+    <button id="font-increase" onclick="adjustFontSize('increase')" aria-label="Aumentar Tamanho da Fonte"
+      title="Aumentar Fonte">A+</button>
+  </div>
+
+  <div class="main-content-wrapper">
+    <header>
+      <div class="logo">
+        <h1>π-Tágoras</h1>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" data-i18n="navHome">Home</a></li>
+          <li><a href="sobre.html" data-i18n="navSobre">Sobre Nós</a></li>
+          <li><a href="produtos.html" data-i18n="navEquipes">Equipes</a></li>
+          <li><a href="contato.html" data-i18n="navContato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <button onclick="setLanguage('pt')">
+          <span class="flag-icon flag-icon-br"></span>
+        </button>
+        <button onclick="setLanguage('en')">
+          <span class="flag-icon flag-icon-us"></span>
+        </button>
+        <button onclick="setLanguage('es')">
+          <span class="flag-icon flag-icon-es"></span>
+        </button>
+      </div>
+    </header>
+
+    <section id="contato-principal">
+      <div class="contato-header">
+        <h2 data-i18n="footerContactTitle">Fale Conosco</h2>
+        <p data-i18n="contactSubtitle">Seja para tirar dúvidas sobre consultoria, agendar um diagnóstico ou deixar uma
+          mensagem, nossa equipe está pronta para te atender.</p>
+      </div>
+      <div class="contato-grid">
+        <div class="contato-form">
+          <h3 data-i18n="formTitle">Envie sua Mensagem</h3>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="nome" data-i18n="formLabelName">Nome Completo *</label>
+              <input type="text" id="nome" name="nome" data-i18n="formLabelName" placeholder="Seu nome completo"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="email" data-i18n="formLabelEmail">E-mail *</label>
+              <input type="email" id="email" name="email" data-i18n="formLabelEmail" placeholder="seu.email@exemplo.com"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="telefone" data-i18n="formLabelPhone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" data-i18n="formLabelPhone" placeholder="(00) 90000-0000">
+            </div>
+            <div class="form-group">
+              <label for="assunto" data-i18n="formLabelSubject">Assunto</label>
+              <input type="text" id="assunto" name="assunto" data-i18n="formLabelSubject"
+                placeholder="Ex: Solicitação de orçamento">
+            </div>
+            <div class="form-group">
+              <label for="mensagem" data-i18n="formLabelMessage">Mensagem *</label>
+              <textarea id="mensagem" name="mensagem" rows="5" data-i18n="formLabelMessage"
+                placeholder="Descreva sua necessidade..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary-form" data-i18n="formSubmitBtn">Enviar Mensagem</button>
+          </form>
+        </div>
+        <div class="contato-info">
+          <div class="info-card">
+            <i class="fas fa-envelope info-icon"></i>
+            <h4 data-i18n="infoCardEmailTitle">E-mail</h4>
+            <p class="info-detail" data-i18n="infoCardEmailDetail">comercial@pitagoras.com</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-phone-alt info-icon"></i>
+            <h4 data-i18n="infoCardPhoneTitle">Telefone</h4>
+            <p class="info-detail" data-i18n="infoCardPhoneDetail">+55 (11) 98765-4321</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-headset info-icon"></i>
+            <h4 data-i18n="infoCardSupportTitle">Suporte e Atendimento</h4>
+            <p class="info-detail" data-i18n="infoCardSupportDetail">De segunda a sexta-feira, das 9h às 18h (Horário de
+              Brasília)</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-map-marker-alt info-icon"></i>
+            <h4 data-i18n="infoCardLocationTitle">Localização</h4>
+            <p class="info-detail" data-i18n="infoCardLocationDetail">Av. Filosofia Aplicada, 404, Sala 101 - São Paulo,
+              SP</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-col about-col">
+          <h3>PITÁGORAS</h3>
+          <p data-i18n="footerSlogan"><strong>Filosofia para uma vida mais Sábia.</strong></p>
+          <p data-i18n="footerAddress">Endereço: Rua Exemplo, 123 - Cidade/Estado</p>
+          <p class="copyright" data-i18n="footerCopy">
+            &copy; 2025 Pitágoras - Todos os direitos reservados.
+          </p>
+        </div>
+        <div class="footer-col links-col">
+          <h4 data-i18n="footerNavTitle">Navegação</h4>
+          <ul>
+            <li><a href="#home" data-i18n="footerLinkHome">Home</a></li>
+            <li><a href="#sobre" data-i18n="footerLinkSobre">Sobre Nós</a></li>
+            <li><a href="#areas" data-i18n="footerLinkAreas">Áreas de Consultoria</a></li>
+            <li><a href="#etica" data-i18n="footerLinkEtica">Ética e Pilares</a></li>
+            <li><a href="#contato" data-i18n="footerLinkContato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col contact-col">
+          <h4 data-i18n="footerContactTitle">Fale Conosco</h4>
+          <p data-i18n="footerEmail">Email: <a href="mailto:contato@pitagoras.com">contato@pitagoras.com</a></p>
+          <p data-i18n="footerPhone">Telefone: (11) 1234-5678</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+  <script src="translation.js"></script>
+</body>
+
+</html>
