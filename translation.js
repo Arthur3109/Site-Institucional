@@ -2,7 +2,6 @@
 // Dicionário de Textos de Tradução (Completo)
 // =======================================================
 const translations = {
-    // Atenção: Usei as chaves dos seus arquivos JS. Certifique-se de que todas as suas traduções estão aqui.
     
     pt: {
         // --- NAVEGAÇÃO --- (Chaves do Cabeçalho e Rodapé)
@@ -268,11 +267,6 @@ const translations = {
         'footer_contact_title': 'Fale Conosco',
         'footer_all_rights': '&copy; 2025 Pitágoras - Todos os direitos reservados.',
 
-        'daltonismoNormal': "Normal",
-    'daltonismoProtanopia': "Protanopia (Def. Vermelho)",
-    'daltonismoDeuteranopia': "Deuteranopia (Def. Verde)",
-    'daltonismoTritanopia': "Tritanopia (Def. Azul)",
-    'daltonismoAcromatopsia': "Monocromia (Escala de Cinza)",
     },
     en: {
         // --- NAVEGAÇÃO ---
@@ -537,11 +531,6 @@ const translations = {
         'footer_nav_title': 'Navigation',
         'footer_contact_title': 'Contact Us',
         'footer_all_rights': '&copy; 2025 Pitágoras - All rights reserved.',
-        'daltonismoNormal': "Normal",
-    'daltonismoProtanopia': "Protanopia (Red Def.)",
-    'daltonismoDeuteranopia': "Deuteranopia (Green Def.)",
-    'daltonismoTritanopia': "Tritanopia (Blue Def.)",
-    'daltonismoAcromatopsia': "Monochromy (Grayscale)",
     },
     es: {
         // --- NAVEGAÇÃO ---
@@ -806,11 +795,6 @@ const translations = {
         'footer_nav_title': 'Navegación',
         'footer_contact_title': 'Contáctenos',
         'footer_all_rights': '&copy; 2025 Pitágoras - Todos los derechos reservados.',
-        'daltonismoNormal': "Normal",
-    'daltonismoProtanopia': "Protanopía (Def. Rojo)",
-    'daltonismoDeuteranopia': "Deuteranopía (Def. Verde)",
-    'daltonismoTritanopia': "Tritanopía (Def. Azul)",
-    'daltonismoAcromatopsia': "Monocromía (Escala de Grises)",
     },
 };
 
@@ -863,7 +847,7 @@ function hideLoader() {
 // ==========================================
 
 function setLanguage(lang) {
-    // 🚨 1. MOSTRA O LOADER antes de iniciar a tradução
+    // 1. MOSTRA O LOADER antes de iniciar a tradução
     showLoader(); 
 
     // Simula um pequeno atraso para que o usuário veja o loader antes da tradução instantânea
@@ -888,7 +872,7 @@ function setLanguage(lang) {
         
         localStorage.setItem('preferredLanguage', lang);
         
-        // 🚨 2. ESCONDE O LOADER após a tradução
+        // 2. ESCONDE O LOADER após a tradução
         hideLoader();
 
     }, 200); // 200ms de "tempo de processamento" de tradução.
@@ -951,7 +935,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// 🚨 LÓGICA DO LOADER INICIAL: Oculta a animação somente quando TUDO (incluindo imagens) estiver carregado.
+// LÓGICA DO LOADER INICIAL: Oculta a animação somente quando TUDO (incluindo imagens) estiver carregado.
 window.addEventListener('load', () => {
     // Esconde o loader após o carregamento total da página
     hideLoader(); 
