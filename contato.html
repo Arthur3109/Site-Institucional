@@ -7,8 +7,77 @@
   <script src="https://kit.fontawesome.com/dd1d2b7bc0.js" crossorigin="anonymous"></script>
   <title>π-Tágoras - Contato</title>
   <link rel="shortcut icon" href="Imagem/LogoPi.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    .navbar {
+      background-color: var(--cinza-claro) !important;
+      padding: 1rem 5%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--azul-marinho) !important;
+    }
+
+    .nav-link {
+      color: var(--azul-marinho) !important;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: var(--destaque-verde) !important;
+    }
+
+    .flag-btn {
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transition: all 0.3s;
+      overflow: hidden;
+    }
+
+    .flag-btn:hover {
+      border-color: var(--amarelo-destaque);
+      transform: scale(1.15);
+    }
+
+    .flag-btn span {
+      font-size: 22px;
+    }
+
+    /* Mobile: fundo escuro no menu aberto */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background-color: var(--azul-marinho);
+        margin-top: 15px;
+        border-radius: 12px;
+        padding: 20px;
+      }
+
+      .nav-link {
+        color: white !important;
+        font-size: 1.3rem;
+        padding: 12px 0 !important;
+      }
+
+      .nav-link:hover {
+        color: var(--amarelo-destaque) !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -17,7 +86,6 @@
     <div class="loader-spinner">π</div>
     <p>Carregando π-Tágoras...</p>
   </div>
-
 
   <div id="font-size-controls" class="accessibility-controls">
     <button id="font-decrease" onclick="adjustFontSize('decrease')" aria-label="Diminuir Tamanho da Fonte"
@@ -29,33 +97,51 @@
   </div>
 
   <div class="main-content-wrapper">
-    <header>
-      <div class="logo">
-        <h1>π-Tágoras</h1>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">π-Tágoras</a>
+
+        <!-- Botão hambúrguer (aparece só no mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu + Bandeiras -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto align-items-center gap-4">
+
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-i18n="navHome">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre.html" data-i18n="navSobre">Sobre Nós</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="produtos.html" data-i18n="navEquipes">Equipes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contato.html" data-i18n="navContato">Contato</a>
+            </li>
+
+            <!-- Bandeiras de idioma -->
+            <li class="nav-item d-flex gap-2">
+              <button class="flag-btn" onclick="setLanguage('pt')" title="Português">
+                <span class="flag-icon flag-icon-br"></span>
+              </button>
+              <button class="flag-btn" onclick="setLanguage('en')" title="English">
+                <span class="flag-icon flag-icon-us"></span>
+              </button>
+              <button class="flag-btn" onclick="setLanguage('es')" title="Español">
+                <span class="flag-icon flag-icon-es"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
-      <button class="menu-toggle" aria-label="Abrir Menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html" data-i18n="navHome">Home</a></li>
-          <li><a href="sobre.html" data-i18n="navSobre">Sobre Nós</a></li>
-          <li><a href="produtos.html" data-i18n="navEquipes">Equipes</a></li>
-          <li><a href="contato.html" data-i18n="navContato">Contato</a></li>
-        </ul>
-      </nav>
-      <div class="language-switcher">
-        <button onclick="setLanguage('pt')">
-          <span class="flag-icon flag-icon-br"></span>
-        </button>
-        <button onclick="setLanguage('en')">
-          <span class="flag-icon flag-icon-us"></span>
-        </button>
-        <button onclick="setLanguage('es')">
-          <span class="flag-icon flag-icon-es"></span>
-        </button>
-      </div>
-    </header>
+    </nav>
 
     <section id="contato-principal">
       <div class="contato-header">
@@ -66,30 +152,27 @@
       <div class="contato-grid">
         <div class="contato-form">
           <h3 data-i18n="formTitle">Envie sua Mensagem</h3>
-          <form action="#" method="POST">
+          <form id="contactForm" action="#" method="POST">
             <div class="form-group">
               <label for="nome" data-i18n="formLabelName">Nome Completo *</label>
-              <input type="text" id="nome" name="nome" data-i18n="formLabelName" placeholder="Seu nome completo"
-                required>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
             </div>
             <div class="form-group">
               <label for="email" data-i18n="formLabelEmail">E-mail *</label>
-              <input type="email" id="email" name="email" data-i18n="formLabelEmail" placeholder="seu.email@exemplo.com"
-                required>
+              <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
             </div>
             <div class="form-group">
               <label for="telefone" data-i18n="formLabelPhone">Telefone</label>
-              <input type="tel" id="telefone" name="telefone" data-i18n="formLabelPhone" placeholder="(00) 90000-0000">
+              <input type="tel" id="telefone" name="telefone" placeholder="(00) 90000-0000">
             </div>
             <div class="form-group">
               <label for="assunto" data-i18n="formLabelSubject">Assunto</label>
-              <input type="text" id="assunto" name="assunto" data-i18n="formLabelSubject"
-                placeholder="Ex: Solicitação de orçamento">
+              <input type="text" id="assunto" name="assunto" placeholder="Ex: Solicitação de orçamento">
             </div>
             <div class="form-group">
               <label for="mensagem" data-i18n="formLabelMessage">Mensagem *</label>
-              <textarea id="mensagem" name="mensagem" rows="5" data-i18n="formLabelMessage"
-                placeholder="Descreva sua necessidade..." required></textarea>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva sua necessidade..."
+                required></textarea>
             </div>
             <button type="submit" class="btn-primary-form" data-i18n="formSubmitBtn">Enviar Mensagem</button>
           </form>
@@ -120,6 +203,7 @@
         </div>
       </div>
     </section>
+
     <footer>
       <div class="footer-container">
         <div class="footer-col about-col">
@@ -134,7 +218,7 @@
           <h4 data-i18n="footerNavTitle">Navegação</h4>
           <ul>
             <li><a href="index.html" data-i18n="footerLinkHome">Home</a></li>
-            <li><a href="sobre.html" footerLinkSobre">Sobre Nós</a></li>
+            <li><a href="sobre.html" data-i18n="footerLinkSobre">Sobre Nós</a></li>
             <li><a href="produtos.html" data-i18n="footerLinkAreas">Equipes</a></li>
             <li><a href="#mvv-cards" data-i18n="footerLinkEtica">Ética e Pilares</a></li>
             <li><a href="contato.html" data-i18n="footerLinkContato">Contato</a></li>
@@ -144,22 +228,46 @@
           <h4 data-i18n="footerContactTitle">Fale Conosco</h4>
           <p data-i18n="footerEmail">Email: <a href="mailto:contato@pitagoras.com">contato@pitagoras.com</a></p>
           <p data-i18n="footerPhone">Telefone: (11) 1234-5678</p>
-          <div class="social-links">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          </div>
         </div>
       </div>
     </footer>
   </div>
 
+  <div id="success-animation">
+    <div class="success-box">
+      <div class="success-checkmark">
+      </div>
+      <h3 data-i18n="successTitle">Mensagem Enviada!</h3>
+      <p data-i18n="successText">Obrigado! Em breve nossa equipe entrará em contato.</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
   <script>
+    // Menu mobile
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.main-nav');
-
     menuToggle.addEventListener('click', () => {
       nav.classList.toggle('active');
+    });
+
+    // Animação de sucesso ao enviar o formulário
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();   // Remova essa linha quando conectar a um backend real
+
+      // Mostra a animação
+      document.getElementById('success-animation').style.display = 'flex';
+
+      // Limpa o formulário
+      this.reset();
+
+      // Esconde a animação após 4 segundos
+      setTimeout(() => {
+        document.getElementById('success-animation').style.display = 'none';
+      }, 4000);
     });
   </script>
   <script src="translation.js"></script>

@@ -17,7 +17,7 @@ const translations = {
         heroCta: "Agendar Demonstração",
 
         // --- HOME: TIMES (ÁREAS DE CONSULTORIA) ---
-        timesTitle: "Áreas de Consultoria",
+        timesTitle: "Áreas das Equipes",
         timesSubtitle: "A Pitágoras é composta por equipes especializadas, cada uma focada em uma área fundamental da filosofia aplicada para aprimorar o seu negócio com precisão e profundidade.",
         timeGregoLogo: "GREGO",
         timeGregoTitle: "Time Grego: Filosofia Clássica",
